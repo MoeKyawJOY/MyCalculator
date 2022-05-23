@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="operand_digit_size">24sp</dimen>
+    <dimen name="answer_digit_size">40sp</dimen>
+    <dimen name="dial_top_margin">64dp</dimen>
+    <dimen name="digit_button_width">60dp</dimen>
+    <dimen name="digit_button_height">60dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="corner_radius">30dp</dimen>
+
+    <dimen name="ac_button_width">100dp</dimen>
+    <dimen name="equal_button_width">180dp</dimen>
+    <dimen name="ac_button_height">60dp</dimen>
+    <dimen name="division_text_size">15sp</dimen>
+</resources>

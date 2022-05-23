@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/small_padding"
+        android:layout_marginTop="@dimen/dial_top_margin"
+        android:backgroundTint="@color/gray"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_padding"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvExpression"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:textAlignment="viewEnd"
+                android:maxLines="2"
+                android:minLines="2"
+                android:textSize="@dimen/operand_digit_size"
+                tools:text="10+20" />
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:textAlignment="textEnd"
+                android:textSize="@dimen/answer_digit_size"
+                tools:text="=30" />
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        tools:layout_editor_absoluteX="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_digit_7"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/btn_digit_8"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/btn_digit_9"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/nine" />
+
+            <ImageButton
+                android:id="@+id/btn_back_delete"
+                android:layout_width="@dimen/digit_button_width"
+                android:layout_height="@dimen/digit_button_height"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_weight="1"
+                android:background="@drawable/button_background_gray"
+                android:src="@drawable/ic_backspace_red"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_digit_4"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/btn_digit_5"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/btn_digit_6"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/btn_plus"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operation_button_background_color"
+                android:text="+" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_digit_1"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/btn_digit_2"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/btn_digit_3"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/btn_minus"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operation_button_background_color"
+                android:text="@string/minus_symbol" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/small_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_digit_0"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/btn_dot"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:text="@string/dot" />
+
+            <Button
+                android:id="@+id/btn_multiply"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:textSize="@dimen/division_text_size"
+                android:backgroundTint="@color/operation_button_background_color"
+                android:text="@string/multiply_sign" />
+
+            <Button
+                android:id="@+id/btn_division"
+                style="@style/digit_button_style"
+                android:layout_weight="1"
+                android:backgroundTint="@color/operation_button_background_color"
+                android:text="@string/division_symbol" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginVertical="@dimen/small_margin"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAc"
+                style="@style/digit_button_style"
+                android:layout_width="@dimen/ac_button_width"
+                android:layout_height="@dimen/ac_button_height"
+                android:layout_weight="1"
+                android:backgroundTint="@color/ac_button_background"
+                android:text="@string/ac" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                style="@style/digit_button_style"
+                android:layout_width="@dimen/equal_button_width"
+                android:layout_height="@dimen/ac_button_height"
+                android:layout_weight="1"
+                android:text="@string/equal_sign" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
