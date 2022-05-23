@@ -7,6 +7,7 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.joy.mycalculator.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.ExpressionBuilder
+import kotlin.math.round
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.resultValue.observe(this){
-            binding.tvResult.text = "= $it"
+            binding.tvResult.text = "= ${roundDouble(it)}"
         }
 
         viewModel.showResult.observe(this){
@@ -64,5 +65,15 @@ class MainActivity : AppCompatActivity() {
             viewModel.calculateAnswer()
         }
 
+    }
+
+    fun roundDouble(d: Double): String{
+        val string = d.toString()
+
+        if(string.endsWith(".0")){
+            return string.substring(0, string.lastIndex - 1)
+        }
+
+        return string
     }
 }
