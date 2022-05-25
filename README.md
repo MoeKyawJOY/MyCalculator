@@ -9,4 +9,4 @@
 
 
 ## Download
-  Please download the app from [here](https://drive.google.com/file/d/1sOgmnwwX6ZF_GFrvzPGMZCZNSO7813me/view?usp=sharing).
+  Please download the app from [here](https://drive.google.com/file/d/1u0Y_2lMBHPVdLbVOrmDpwMdK_uE_2jhz/view?usp=sharing).
